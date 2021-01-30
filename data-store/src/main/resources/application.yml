@@ -4,11 +4,12 @@ spring:
 
 ---
 spring:
-  profiles: local
+  config:
+    activate:
+      on-profile: dev
 
 ---
 spring:
-  profiles: dev
----
-spring:
-  profiles: prod
+  config:
+    activate:
+      on-profile: prod
