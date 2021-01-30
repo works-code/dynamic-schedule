@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss}|%logger{36}:%line|%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SERVICE_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE}/service.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}/service.log.%d{yyyyMMdd}.gz</fileNamePattern> <!--로그 일별 압축-->
+            <maxHistory>5</maxHistory> <!--5일 까지 로그를 남기고 삭제-->
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss}|%logger{36}:%line|%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com" level="INFO">    <appender-ref ref="SERVICE_LOG"/></logger>
+    <logger name="org" level="INFO">    <appender-ref ref="SERVICE_LOG"/></logger>
+    <logger name="net" level="INFO">    <appender-ref ref="SERVICE_LOG"/></logger>
+    <logger name="javax" level="INFO">    <appender-ref ref="SERVICE_LOG"/></logger>
+    <logger name="antlr" level="INFO">    <appender-ref ref="SERVICE_LOG"/></logger>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

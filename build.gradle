@@ -1,0 +1,109 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.0'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+}
+
+/***
+ * 모든 프로젝트 적용 (root 포함)
+ */
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    group = 'com.code'
+    sourceCompatibility = '15'
+    targetCompatibility = '15'
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+    // 기본 패키지 스토리지
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compile 'org.springframework.boot:spring-boot-starter-web'
+        compile 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testCompile 'org.springframework.boot:spring-boot-starter-test'
+        compile 'org.apache.commons:commons-lang3' // util 을 사용 하기 위해
+        compile 'com.google.code.gson:gson:2.8.5' // json 형식으로 편리하게 변환 하기 위해
+    }
+    // test 실행시 junit 사용 (test anotation을 사용 하기 위한 설정)
+    test {
+        useJUnitPlatform()
+    }
+}
+
+/***
+ * 서브 프로젝트만 적용
+ */
+subprojects {
+    // bootRun 실행시 환경 설정 변경하여 실행 할 수 있도록 함
+    // ./gradlew -Dspring.profiles.active=dev bootRun
+    bootRun {
+        systemProperties System.properties
+    }
+}
+
+/***
+ * 각각 프로젝트 설정
+ */
+project(":module-01"){
+    // jar 이름 지정
+    jar {
+        archivesBaseName = 'module-01'
+    }
+    // 버전별로 jar 생성을 위해 필요 (버전별 관리가 필요함.)
+    version '1.0.0-SNAPSHOT'
+    dependencies{
+        compile project (':core-utils')
+    }
+}
+
+project(":module-02"){
+    // jar 이름 지정
+    jar {
+        archivesBaseName = 'module-02'
+    }
+    // 버전별로 jar 생성을 위해 필요 (버전별 관리가 필요함.)
+    version '1.0.0-SNAPSHOT'
+    dependencies{
+        compile project (':core-utils')
+    }
+}
+
+project(":core-utils"){
+    /***
+     * compile project dose not exist 오류 해결
+     * 외부 프로젝트에서 가져온 클래스를 인식못하는 문제가 있어 아래와 같이 설정
+     */
+    jar{
+        enabled = true
+    }
+    dependencies{
+        compile 'org.springframework.boot:spring-boot-starter-quartz'
+        compile project (':data-store')
+    }
+}
+
+project(":data-store"){
+    /***
+     * compile project dose not exist 오류 해결
+     * 외부 프로젝트에서 가져온 클래스를 인식못하는 문제가 있어 아래와 같이 설정
+     */
+    jar{
+        enabled = true
+    }
+    dependencies {
+        implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+        runtimeOnly 'mysql:mysql-connector-java'
+    }
+
+}
+
+

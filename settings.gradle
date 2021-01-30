@@ -1,0 +1,2 @@
+rootProject.name = 'dynamic-schedule'
+include 'module-01', 'module-02', 'core-utils', 'data-store'

@@ -1,0 +1,62 @@
+[INFO ] 2021-01-30 20:35:52|com.code.Module02Application:55|Starting Module02Application using Java 15.0.2 on hong-yuliui-MacBookPro.local with PID 96351 (/Users/hongyoolee/IdeaProjects/dynamic-schedule/module-02/build/classes/java/main started by hongyoolee in /Users/hongyoolee/IdeaProjects/dynamic-schedule/module-02)
+[INFO ] 2021-01-30 20:35:52|com.code.Module02Application:664|The following profiles are active: dev
+[INFO ] 2021-01-30 20:35:53|o.s.b.w.e.tomcat.TomcatWebServer:108|Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2021-01-30 20:35:53|o.a.coyote.http11.Http11NioProtocol:173|Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-01-30 20:35:53|o.a.catalina.core.StandardService:173|Starting service [Tomcat]
+[INFO ] 2021-01-30 20:35:53|o.a.catalina.core.StandardEngine:173|Starting Servlet engine: [Apache Tomcat/9.0.39]
+[INFO ] 2021-01-30 20:35:53|o.a.c.c.C.[Tomcat].[localhost].[/]:173|Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-01-30 20:35:53|o.s.b.w.s.c.ServletWebServerApplicationContext:289|Root WebApplicationContext: initialization completed in 728 ms
+[INFO ] 2021-01-30 20:35:53|org.quartz.impl.StdSchedulerFactory:1220|Using default implementation for ThreadExecutor
+[INFO ] 2021-01-30 20:35:53|org.quartz.simpl.SimpleThreadPool:268|Job execution threads will use class loader of thread: main
+[INFO ] 2021-01-30 20:35:53|o.quartz.core.SchedulerSignalerImpl:61|Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO ] 2021-01-30 20:35:53|org.quartz.core.QuartzScheduler:229|Quartz Scheduler v.2.3.2 created.
+[INFO ] 2021-01-30 20:35:53|org.quartz.simpl.RAMJobStore:155|RAMJobStore initialized.
+[INFO ] 2021-01-30 20:35:53|org.quartz.core.QuartzScheduler:294|Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO ] 2021-01-30 20:35:53|org.quartz.impl.StdSchedulerFactory:1374|Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+[INFO ] 2021-01-30 20:35:53|org.quartz.impl.StdSchedulerFactory:1378|Quartz scheduler version: 2.3.2
+[INFO ] 2021-01-30 20:35:53|org.quartz.core.QuartzScheduler:547|Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[INFO ] 2021-01-30 20:35:53|com.zaxxer.hikari.HikariDataSource:95|HikariPool-1 - Starting...
+[INFO ] 2021-01-30 20:35:53|com.zaxxer.hikari.HikariDataSource:107|HikariPool-1 - Start completed.
+[ERROR] 2021-01-30 20:35:53|com.code.job.PrintJob:18|### print Module-02
+[INFO ] 2021-01-30 20:35:53|o.s.s.c.ThreadPoolTaskExecutor:181|Initializing ExecutorService 'applicationTaskExecutor'
+[ERROR] 2021-01-30 20:35:54|com.code.job.PrintJob:18|### print Module-02
+[INFO ] 2021-01-30 20:35:54|org.quartz.impl.StdSchedulerFactory:1220|Using default implementation for ThreadExecutor
+[INFO ] 2021-01-30 20:35:54|o.quartz.core.SchedulerSignalerImpl:61|Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO ] 2021-01-30 20:35:54|org.quartz.core.QuartzScheduler:229|Quartz Scheduler v.2.3.2 created.
+[INFO ] 2021-01-30 20:35:54|org.quartz.simpl.RAMJobStore:155|RAMJobStore initialized.
+[INFO ] 2021-01-30 20:35:54|org.quartz.core.QuartzScheduler:294|Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO ] 2021-01-30 20:35:54|org.quartz.impl.StdSchedulerFactory:1374|Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+[INFO ] 2021-01-30 20:35:54|org.quartz.impl.StdSchedulerFactory:1378|Quartz scheduler version: 2.3.2
+[INFO ] 2021-01-30 20:35:54|org.quartz.core.QuartzScheduler:2293|JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@10ed037a
+[INFO ] 2021-01-30 20:35:54|o.a.coyote.http11.Http11NioProtocol:173|Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-01-30 20:35:54|o.s.b.w.e.tomcat.TomcatWebServer:220|Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2021-01-30 20:35:54|o.s.s.quartz.SchedulerFactoryBean:727|Starting Quartz Scheduler now
+[INFO ] 2021-01-30 20:35:54|org.quartz.core.QuartzScheduler:547|Scheduler quartzScheduler_$_NON_CLUSTERED started.
+[INFO ] 2021-01-30 20:35:54|com.code.Module02Application:61|Started Module02Application in 1.811 seconds (JVM running for 2.013)
+[ERROR] 2021-01-30 20:35:55|com.code.job.PrintJob:18|### print Module-02
+[ERROR] 2021-01-30 20:35:56|com.code.job.PrintJob:18|### print Module-02
+[ERROR] 2021-01-30 20:35:57|com.code.job.PrintJob:18|### print Module-02
+[INFO ] 2021-01-30 20:35:57|org.quartz.core.QuartzScheduler:585|Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+[INFO ] 2021-01-30 20:35:57|o.s.s.quartz.SchedulerFactoryBean:845|Shutting down Quartz Scheduler
+[INFO ] 2021-01-30 20:35:57|org.quartz.core.QuartzScheduler:666|Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO ] 2021-01-30 20:35:57|org.quartz.core.QuartzScheduler:585|Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+[INFO ] 2021-01-30 20:35:57|org.quartz.core.QuartzScheduler:740|Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO ] 2021-01-30 20:35:57|o.s.s.c.ThreadPoolTaskExecutor:218|Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2021-01-30 20:35:57|com.zaxxer.hikari.HikariDataSource:347|HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-01-30 20:35:57|com.zaxxer.hikari.pool.HikariPool:204|HikariPool-1 - Close initiated...
+[INFO ] 2021-01-30 20:35:57|com.zaxxer.hikari.pool.HikariPool:238|HikariPool-1 - Closed.
+[INFO ] 2021-01-30 20:35:57|com.zaxxer.hikari.HikariDataSource:349|HikariPool-1 - Shutdown completed.

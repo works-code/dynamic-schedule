@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: local
+logging:
+  file:
+    path: ./logs/
+  config: classpath:local/logback-spring.xml
+server:
+  port: 8081
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+logging:
+  config: classpath:dev/logback-spring.xml
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+logging:
+  config: classpath:prod/logback-spring.xml
